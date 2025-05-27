@@ -14,7 +14,7 @@ export default function Settings() {
         </label>
         <ul
           tabIndex={0}
-          className="dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box max-h-60 w-52 overflow-y-scroll"
+          className="dropdown-content z-1 p-2 shadow-sm bg-base-100 rounded-box max-h-60 w-52 overflow-y-scroll"
         >
           {themes.map((theme) => {
             return (
