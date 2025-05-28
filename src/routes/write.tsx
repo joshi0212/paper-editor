@@ -1,5 +1,5 @@
-import { render, compile  } from "../lib/ipc/typst";
+import { Editor } from "@monaco-editor/react";
 
 export default function WriteRoute() {
-  compile()
+    return <Editor className="w-1/2 h-full my-2" /> 
 }
