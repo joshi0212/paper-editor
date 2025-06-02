@@ -40,6 +40,10 @@ const router = createBrowserRouter([
         path: "/deliver",
         element: <DeliverRoute/>,
       },
+      {
+        path: "/settings",
+        element: <Settings/>
+      }
     ],
   },
 ]);
