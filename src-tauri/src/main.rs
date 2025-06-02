@@ -3,13 +3,7 @@
     windows_subsystem = "windows"
 )]
 
-mod engine;
-mod project;
-
-use project::Project;
-
 use env_logger::Env;
-use log::info;
 use std::sync::{Arc, Mutex};
 use tauri::{Manager};
 
@@ -19,13 +13,8 @@ async fn main() {
 
     tauri::Builder::default()
         .setup(|app| {
-            let default_project : Option<Project> = None;
-            app.manage(Mutex::new(default_project));
             Ok(())
         })
-        .invoke_handler(tauri::generate_handler![
-
-        ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
